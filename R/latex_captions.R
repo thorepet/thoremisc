@@ -27,24 +27,16 @@ latex_caption_to_bottom <- function(x, to_console = FALSE) {
   }
 }
 
-#' Add a caption to a stargazer::stargazer() output.
+#' Add a caption to a \code{stargazer::stargazer()} output.
 #'
-#' @param string An atomic character produced by stargazer::stargazer().
+#' @param string An atomic character produced by \code{stargazer::stargazer()}.
 #' @param caption An atomic character to be added as the caption.
 #' @param to_bottom Boolean, should the caption moved to the bottom?
-#' @return string with an added caption
+#' @return \code{string} with an added \code{caption}
 #' @examples
 #' latex_add_caption(stargazer::stargazer(model), "This is going to be the
 #' caption", TRUE)
 latex_add_caption <- function(string, caption, to_bottom = TRUE) {
-  # write a caption
-  #
-  # Args:
-  #   string: character vector
-  #   caption: character, caption to write
-  # Returns:
-  #   string, modified
-
   if(to_bottom) string <- latex_caption_to_bottom(string, to_console = FALSE)
 
   pattern <- "caption[{][}]"
