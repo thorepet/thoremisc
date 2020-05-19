@@ -2,22 +2,22 @@
 % Please edit documentation in R/latex_captions.R
 \name{latex_add_caption}
 \alias{latex_add_caption}
-\title{Add a caption to a stargazer::stargazer() output.}
+\title{Add a caption to a \code{stargazer::stargazer()} output.}
 \usage{
 latex_add_caption(string, caption, to_bottom = TRUE)
 }
 \arguments{
-\item{string}{An atomic character produced by stargazer::stargazer().}
+\item{string}{An atomic character produced by \code{stargazer::stargazer()}.}
 
 \item{caption}{An atomic character to be added as the caption.}
 
 \item{to_bottom}{Boolean, should the caption moved to the bottom?}
 }
 \value{
-string with an added caption
+\code{string} with an added \code{caption}
 }
 \description{
-Add a caption to a stargazer::stargazer() output.
+Add a caption to a \code{stargazer::stargazer()} output.
 }
 \examples{
 latex_add_caption(stargazer::stargazer(model), "This is going to be the

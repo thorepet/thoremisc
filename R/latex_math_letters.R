@@ -12,6 +12,7 @@
 #' @return \code{string} with leading letters wrapped in \code{$}.
 #' @examples
 #' latex_math_letters("The t-test and z-score.", "z-score")
+#' @export
 latex_math_letters <- function(string, convert = NULL, append = TRUE) {
   # baseline leading letters
   lead_letters <- c("tpF")

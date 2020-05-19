@@ -9,6 +9,7 @@
 #' @return \code{x} with the caption moved to the bottom.
 #' @examples
 #' latex_caption_to_bottom(stargazer::stargazer(model), FALSE)
+#' @export
 latex_caption_to_bottom <- function(x, to_console = FALSE) {
   cap <- grep("\\\\caption", x)
   lab <- grep("\\\\label", x)
@@ -36,6 +37,7 @@ latex_caption_to_bottom <- function(x, to_console = FALSE) {
 #' @examples
 #' latex_add_caption(stargazer::stargazer(model), "This is going to be the
 #' caption", TRUE)
+#' @export
 latex_add_caption <- function(string, caption, to_bottom = TRUE) {
   if(to_bottom) string <- latex_caption_to_bottom(string, to_console = FALSE)
 

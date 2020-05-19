@@ -12,6 +12,7 @@
 #' \code{alphabet} preceded by backslashes.
 #' @examples
 #' latex_greeks("alpha and beta and foo will be modified", "foo", TRUE)
+#' @export
 latex_greeks <- function(string, alphabet = NULL, append = FALSE) {
   if(is.null(alphabet) & append) stop("Supply an alphabet to be appended.")
 

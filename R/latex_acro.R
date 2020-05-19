@@ -6,6 +6,7 @@
 #' @return \code{string} with all \code{acros} wrapped in \code{command}.
 #' @examples
 #' latex_acro("This package is not on CRAN.", "CRAN")
+#' @export
 latex_acro <- function(string, acros, command = "acs*") {
   pattern <- .prep_pattern(acros)
   replacement <- paste0("\\\\", command, "{\\1}")
