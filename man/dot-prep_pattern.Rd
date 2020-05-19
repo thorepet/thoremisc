@@ -12,7 +12,7 @@
 \value{
 The elements of \code{x} surrounded by Regex word boundaries,
 collapsed with logical ors, and surrounded by parantheses:
-\code{(\\bx[1]\\b|\\bx[2]\\b|...)}.
+\code{(\\\\bx[1]\\\\b|\\\\bx[2]\\\\b|...)}.
 }
 \description{
 Utility function to collapse a character vector into a Regex pattern. The
