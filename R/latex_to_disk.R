@@ -20,7 +20,7 @@ latex_to_disk <- function(string, filename, comment = NULL) {
   )
   if(length(file_ext) > 0) {
     if(file_ext != "tex") warning(
-      paste("Are you sure the file ending is supposed to be", file_ext, "?")
+      paste0("Are you sure the file ending is supposed to be .", file_ext, "?")
     )
   } else {
     filename <- paste0(filename, ".tex")
