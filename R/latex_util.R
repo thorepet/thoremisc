@@ -6,9 +6,7 @@
 #' @param x A character vector.
 #' @return The elements of \code{x} surrounded by Regex word boundaries,
 #' collapsed with logical ors, and surrounded by parantheses:
-#' (\\bx[1]\\b|\\bx[2]\\b|...).
-#' @examples
-#' .prep_pattern(c("foo", "bar"))
+#' \code{(\\bx[1]\\b|\\bx[2]\\b|...)}.
 .prep_pattern <- function(x) {
   # surround all elements with word boundaries, collapse with logical OR
   pattern <- paste0("\\b", x, "\\b", collapse = "|")
