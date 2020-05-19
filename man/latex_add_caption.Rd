@@ -20,6 +20,7 @@ latex_add_caption(string, caption, to_bottom = TRUE)
 Add a caption to a \code{stargazer::stargazer()} output.
 }
 \examples{
-latex_add_caption(stargazer::stargazer(model), "This is going to be the
-caption", TRUE)
+latex_add_caption(stargazer::stargazer(
+data.frame(a = rnorm(5), b = rnorm(5))), "This is going to be the caption",
+TRUE)
 }

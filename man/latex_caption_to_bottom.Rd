@@ -20,5 +20,6 @@ the console?}
 Credit to https://stackoverflow.com/a/42681368
 }
 \examples{
-latex_caption_to_bottom(stargazer::stargazer(model), FALSE)
+latex_caption_to_bottom(stargazer::stargazer(
+data.frame(a = rnorm(5), b = rnorm(5))), FALSE)
 }
