@@ -3,7 +3,7 @@
 \name{latex_caption_to_bottom}
 \alias{latex_caption_to_bottom}
 \title{Move the caption to the bottom of the table produced by
-stargazer::stargazer().}
+\code{stargazer::stargazer()}.}
 \usage{
 latex_caption_to_bottom(x, to_console = FALSE)
 }

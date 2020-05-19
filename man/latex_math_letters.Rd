@@ -2,8 +2,7 @@
 % Please edit documentation in R/latex_math_letters.R
 \name{latex_math_letters}
 \alias{latex_math_letters}
-\title{Wrap the leading letters in \emph{t}-test, \emph{F}-statistic,
-\emph{p}-value etc. in $ to toggle math mode.}
+\title{Toggle LaTeX math mode for leading letters.}
 \usage{
 latex_math_letters(string, convert = NULL, append = TRUE)
 }
@@ -19,9 +18,11 @@ implemented words.}
 \code{string} with leading letters wrapped in \code{$}.
 }
 \description{
-Any combination to leading letter and trailing word will also be
-modified (i.e. if t-test and F-statistic are given, t-statistic and F-test
-will also be matched).
+Wrap the leading letters in \emph{t}-test, \emph{F}-statistic,
+\emph{p}-value etc. in $ to toggle math mode. Any combination to leading
+letter and trailing word will also be modified (i.e. if \emph{t}-test and
+\emph{F}-statistic are given, \emph{t}-statistic and \emph{F}-test will also
+be matched).
 }
 \examples{
 latex_math_letters("The t-test and z-score.", "z-score")

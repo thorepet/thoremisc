@@ -2,10 +2,7 @@
 % Please edit documentation in R/latex_util.R
 \name{.prep_pattern}
 \alias{.prep_pattern}
-\title{Utility function to collapse a character vector into a Regex pattern. The
-vector elements will be surrounded by word boundaries, and combined with
-logical ORs. The whole thing is wrapped in parantheses to catch it as a
-group.}
+\title{Utiliy function to create Regex pattern.}
 \usage{
 .prep_pattern(x)
 }

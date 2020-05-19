@@ -1,9 +1,10 @@
-#' Wrap the leading letters in \emph{t}-test, \emph{F}-statistic,
-#' \emph{p}-value etc. in $ to toggle math mode.
+#' Toggle LaTeX math mode for leading letters.
 #'
-#' Any combination to leading letter and trailing word will also be
-#' modified (i.e. if t-test and F-statistic are given, t-statistic and F-test
-#' will also be matched).
+#' Wrap the leading letters in \emph{t}-test, \emph{F}-statistic,
+#' \emph{p}-value etc. in $ to toggle math mode. Any combination to leading
+#' letter and trailing word will also be modified (i.e. if \emph{t}-test and
+#' \emph{F}-statistic are given, \emph{t}-statistic and \emph{F}-test will also
+#' be matched).
 #'
 #' @param string A character vector.
 #' @param convert A character vector of hyphenated words to wrap.

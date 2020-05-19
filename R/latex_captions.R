@@ -1,5 +1,5 @@
 #' Move the caption to the bottom of the table produced by
-#' stargazer::stargazer().
+#' \code{stargazer::stargazer()}.
 #'
 #' Credit to https://stackoverflow.com/a/42681368
 #'
