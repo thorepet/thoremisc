@@ -10,13 +10,13 @@ ts_event_dist(x)
 \item{x}{A numeric vector of \code{0}s and \code{1}s.}
 }
 \value{
-A data.frame with two numeric columns.
+A \code{data.frame} with two numeric columns.
 }
 \description{
-Returns a data.frame of \code{length(x)} rows with a column of the number of
-rows or steps until the next time the dummy series equals 1, and a columns of
-the number of rows or steps since the last time the dummy series equaled
-\code{1}.
+Returns a \code{data.frame} of \code{length(x)} rows with a column of the
+number of rows or steps until the next time the dummy series equals \code{1},
+and a columns of the number of rows or steps since the last time the dummy
+series equaled \code{1}.
 }
 \examples{
 ts_event_dist(c(0, 0, 0, 1, 0, 1, 0))
