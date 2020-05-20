@@ -10,6 +10,10 @@
 #' @export
 #' @import data.table
 ts_next_in <-  function(x) {
+  # https://cran.r-project.org/web/packages/data.table/vignettes/datatable-importing.html#globals
+  # initialise variables for R NSE check
+  event <- event_window <- next_in <- NULL
+
   dt <- data.table(x)
 
   dt[x == 1, event := .N:1]
@@ -37,6 +41,9 @@ ts_next_in <-  function(x) {
 #' @export
 #' @import data.table
 ts_last_before <-  function(x) {
+  # initialise variables for R NSE check
+  event <- event_window <- last_before <- NULL
+
   dt <- data.table(x = x)
 
   dt[x == 1, event := 1:.N]
