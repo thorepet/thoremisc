@@ -7,7 +7,7 @@ Maintainer: Thore Pet <pet.thore@gmail.com>
 Description: Miscellaneous functions that have accumulated over time for various
     purposes.
 Depends: R (>= 3.5.0)
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
