@@ -13,8 +13,8 @@ ts_last_before(x)
 A numeric vector.
 }
 \description{
-Returns a vector of \code{length(x)} with the number of rows or steps since the
-last time the dummy series equaled \code{1}.
+Returns a vector of \code{length(x)} with the number of rows or steps since
+the last time the dummy series equaled \code{1}.
 }
 \examples{
 ts_last_before(c(0, 0, 0, 1, 0, 1, 0))

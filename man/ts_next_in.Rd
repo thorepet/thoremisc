@@ -13,8 +13,8 @@ ts_next_in(x)
 A numeric vector.
 }
 \description{
-Returns a vector of \code{length(x)} with the number of rows or steps until the
-next time the dummy series equals \code{1}.
+Returns a vector of \code{length(x)} with the number of rows or steps until
+the next time the dummy series equals \code{1}.
 }
 \examples{
 ts_next_in(c(0, 0, 0, 1, 0, 1, 0))

@@ -10,17 +10,18 @@ ts_pad_contig(x)
 \item{x}{Either a numeric vector, or \code{stats::ts()} object.}
 }
 \value{
-An object of \code{class(x)} and \code{length(x)} with \code{NA}s, except for the
-longest contiguous stretch in \code{x}
+An object of \code{class(x)} and \code{length(x)} with \code{NA}s,
+except for the longest contiguous stretch in \code{x}
 }
 \description{
-Apply \code{stats::na.contiguous()} to a timeseries \code{x} and pad the result back to
-its original length with \code{NA}s. Designed for use in
-\code{data.table[, j = pad_contiguous(x), by = g]}, where the replacement needs to
-have the same length as the original.
+Apply \code{stats::na.contiguous()} to a timeseries \code{x} and pad the
+result back to its original length with \code{NA}s. Designed for use in
+\code{data.table[, j = pad_contiguous(x), by = g]}, where the replacement
+needs to have the same length as the original.
 }
 \details{
-Preserves \code{start} and \code{frequency} of \code{x}, if it is a \code{stats::ts()} object.
+Preserves \code{start} and \code{frequency} of \code{x}, if it is a
+\code{stats::ts()} object.
 }
 \examples{
 x <- c(NA, 1, NA, NA, 1:5, NA)
