@@ -2,19 +2,19 @@
 % Please edit documentation in R/ts_event_dist.R
 \name{ts_last_before}
 \alias{ts_last_before}
-\title{Return the number of rows since a dummy equaled 1.}
+\title{Return the number of rows since a dummy equaled \code{1}.}
 \usage{
 ts_last_before(x)
 }
 \arguments{
-\item{x}{A numeric vector of `0`s and `1`s.}
+\item{x}{A numeric vector of \code{0}s and \code{1}s.}
 }
 \value{
 A numeric vector.
 }
 \description{
-Returns a vector of `length(x)` with the number of rows or steps since the
-last time the dummy series equaled 1.
+Returns a vector of \code{length(x)} with the number of rows or steps since the
+last time the dummy series equaled \code{1}.
 }
 \examples{
 ts_last_before(c(0, 0, 0, 1, 0, 1, 0))

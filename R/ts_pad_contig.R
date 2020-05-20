@@ -1,15 +1,16 @@
-#' Apply `stats::na.contiguous()` and pad result to original length.
+#' Apply \code{stats::na.contiguous()} and pad result to original length.
 #'
-#' Apply `stats::na.contiguous()` to a timeseries `x` and pad the result back to
-#' its original length with `NA`s. Designed for use in
-#' `data.table[, j = pad_contiguous(x), by = g]`, where the replacement needs to
-#' have the same length as the original.
+#' Apply \code{stats::na.contiguous()} to a timeseries \code{x} and pad the
+#' result back to its original length with \code{NA}s. Designed for use in
+#' \code{data.table[, j = pad_contiguous(x), by = g]}, where the replacement
+#' needs to have the same length as the original.
 #'
-#' Preserves `start` and `frequency` of `x`, if it is a `stats::ts()` object.
+#' Preserves \code{start} and \code{frequency} of \code{x}, if it is a
+#' \code{stats::ts()} object.
 #'
-#' @param x Either a numeric vector, or `stats::ts()` object.
-#' @return An object of `class(x)` and `length(x)` with `NA`s, except for the
-#' longest contiguous stretch in `x`
+#' @param x Either a numeric vector, or \code{stats::ts()} object.
+#' @return An object of \code{class(x)} and \code{length(x)} with \code{NA}s,
+#' except for the longest contiguous stretch in \code{x}
 #' @examples
 #' x <- c(NA, 1, NA, NA, 1:5, NA)
 #' ts_pad_contig(x)

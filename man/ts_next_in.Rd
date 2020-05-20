@@ -2,19 +2,19 @@
 % Please edit documentation in R/ts_event_dist.R
 \name{ts_next_in}
 \alias{ts_next_in}
-\title{Return the number of rows until a dummy equals 1.}
+\title{Return the number of rows until a dummy equals \code{1}.}
 \usage{
 ts_next_in(x)
 }
 \arguments{
-\item{x}{A numeric vector of `0`s and `1`s.}
+\item{x}{A numeric vector of \code{0}s and \code{1}s.}
 }
 \value{
 A numeric vector.
 }
 \description{
-Returns a vector of `length(x)` with the number of rows or steps until the
-next time the dummy series equals 1.
+Returns a vector of \code{length(x)} with the number of rows or steps until the
+next time the dummy series equals \code{1}.
 }
 \examples{
 ts_next_in(c(0, 0, 0, 1, 0, 1, 0))

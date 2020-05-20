@@ -1,9 +1,9 @@
-#' Return the number of rows until a dummy equals 1.
+#' Return the number of rows until a dummy equals \code{1}.
 #'
-#' Returns a vector of `length(x)` with the number of rows or steps until the
-#' next time the dummy series equals 1.
+#' Returns a vector of \code{length(x)} with the number of rows or steps until
+#' the next time the dummy series equals \code{1}.
 #'
-#' @param x A numeric vector of `0`s and `1`s.
+#' @param x A numeric vector of \code{0}s and \code{1}s.
 #' @return A numeric vector.
 #' @examples
 #' ts_next_in(c(0, 0, 0, 1, 0, 1, 0))
@@ -25,24 +25,18 @@ ts_next_in <-  function(x) {
   return(dt$next_in)
 }
 
-#' Return the number of rows since a dummy equaled 1.
+#' Return the number of rows since a dummy equaled \code{1}.
 #'
-#' Returns a vector of `length(x)` with the number of rows or steps since the
-#' last time the dummy series equaled 1.
+#' Returns a vector of \code{length(x)} with the number of rows or steps since
+#' the last time the dummy series equaled \code{1}.
 #'
-#' @param x A numeric vector of `0`s and `1`s.
+#' @param x A numeric vector of \code{0}s and \code{1}s.
 #' @return A numeric vector.
 #' @examples
 #' ts_last_before(c(0, 0, 0, 1, 0, 1, 0))
 #' @export
 #' @import data.table
 ts_last_before <-  function(x) {
-  # function to return the number of periods since a dummy variable was 1
-  # Args:
-  #   x: a numeric vector containing 0s and 1s
-  # Returns:
-  #   a numeric vector of length x containing the periods after the last 1 in x
-
   dt <- data.table(x = x)
 
   dt[x == 1, event := 1:.N]
@@ -61,11 +55,12 @@ ts_last_before <-  function(x) {
 
 #' Return a information on the occurence of a dummy
 #'
-#' Returns a data.frame of `length(x)` rows with a column of the number of rows
-#' or steps until the next time the dummy series equals 1, and a columns of the
-#' number of rows or steps since the last time the dummy series equaled 1.
+#' Returns a data.frame of \code{length(x)} rows with a column of the number of
+#' rows or steps until the next time the dummy series equals 1, and a columns of
+#' the number of rows or steps since the last time the dummy series equaled
+#' \code{1}.
 #'
-#' @param x A numeric vector of `0`s and `1`s.
+#' @param x A numeric vector of \code{0}s and \code{1}s.
 #' @return A data.frame with two numeric columns.
 #' @examples
 #' ts_event_dist(c(0, 0, 0, 1, 0, 1, 0))
