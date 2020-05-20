@@ -15,5 +15,6 @@ Imports:
     plm (>= 2.0)
 Suggests:
     stargazer (>= 5.0.0),
-    rvest (>= 0.3.0)
+    rvest (>= 0.3.0),
+    xml2 (>= 1.3.0)
 RoxygenNote: 7.1.0
