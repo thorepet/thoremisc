@@ -17,8 +17,12 @@ latex_acro(string, acros, command = "acs*")
 \code{string} with all \code{acros} wrapped in \code{command}.
 }
 \description{
-Wrap abbreviations in text in a LaTeX command.
+Wrap abbreviations in a given LaTeX command to toggle the \code{acronym} or
+\code{glossary} packages. \code{command} defaults to the \code{acronym}
+package's short command, that does not mark the abbreviation as used (the *).
+This avoids the acronym being rendered the first time in the list of figures
+or tables.
 }
 \examples{
-latex_acro("This package is not on CRAN.", "CRAN")
+latex_acro("This package is not on cran.", "cran")
 }
