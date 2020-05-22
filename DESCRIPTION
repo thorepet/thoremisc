@@ -4,10 +4,9 @@ Title: Miscellaneous Functions
 Version: 0.1.0
 Author: Thore Petersen
 Maintainer: Thore Pet <pet.thore@gmail.com>
-Description: Miscellaneous functions that have accumulated over time for various
-    purposes.
+Description: Miscellaneous functions that have accumulated over time for various purposes.
 Depends: R (>= 3.5.0)
-License: MIT + file LICENSE
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports:
