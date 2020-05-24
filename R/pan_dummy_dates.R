@@ -47,7 +47,8 @@ pan_dummy_dates <- function(
   alt_end = NULL
 ) {
 
-  d <- NULL  # avoid notes in R package checking
+  # initialise variables for R NSE check
+  d <- NULL
 
   if(is.data.table(x)) {
     isdt <- TRUE

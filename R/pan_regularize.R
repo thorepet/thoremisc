@@ -24,7 +24,8 @@
 #' @importFrom stats median
 #' @importFrom zoo as.yearmon as.yearqtr
 pan_regularise <- pan_regularize <- function(x, g, t) {
-  # define to avoid problems with R CMD check
+
+  # initialise variables for R NSE check
   V1 <- NULL
 
   if(is.data.table(x)) {
