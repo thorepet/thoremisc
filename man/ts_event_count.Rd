@@ -2,7 +2,7 @@
 % Please edit documentation in R/ts_event_count.R
 \name{ts_event_count}
 \alias{ts_event_count}
-\title{Count and ennumerate of events in a dummy series.}
+\title{Count and ennumerate events in a dummy series.}
 \usage{
 ts_event_count(x)
 }

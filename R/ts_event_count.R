@@ -1,4 +1,4 @@
-#' Count and ennumerate of events in a dummy series.
+#' Count and ennumerate events in a dummy series.
 #'
 #' Given a numeric vector with dummies for events, ennumerate the events. Return
 #' a vector of \code{length(x)} filled with \code{NA}s, and the count, where
