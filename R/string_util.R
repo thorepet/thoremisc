@@ -76,7 +76,7 @@
 #' trailing whitespace.
 #'
 #' @param string A character vector.
-#' @return \code{string} with all \code{acros} wrapped in \code{command}.
+#' @return \code{string} with redundant whitespaces removed.
 #' @examples
 #' string_redund_ws(" This  string   will be shorter.   ")
 #' @export

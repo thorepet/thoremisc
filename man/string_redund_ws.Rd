@@ -10,7 +10,7 @@ string_redund_ws(string)
 \item{string}{A character vector.}
 }
 \value{
-\code{string} with all \code{acros} wrapped in \code{command}.
+\code{string} with redundant whitespaces removed.
 }
 \description{
 Replace consecutive whitespaces by a single one, and trim leading and
