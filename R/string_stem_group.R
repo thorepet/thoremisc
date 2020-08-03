@@ -13,14 +13,16 @@
 #' @return \code{string}, with all individual words stemmed, collapsed back into
 #'   the original groups of words
 #' @examples
-#' string_stem_group(c("The coolest words", "Will all be stemmed"))
+#' string_stem_group(c("The coolest words", "Will all be stemmed"), "english")
 #' @export
+#' @importFrom SnowballC wordStem
+#' @importFrom stringr str_split
 string_stem_group <- function(string, language) {
   # split input along whitespaces
   string <- str_split(string, "\\s")
 
   # stem all words
-  string <- lapply(string, SnowballC::wordStem, language = language)
+  string <- lapply(string, wordStem, language = language)
 
   # collapse stemmed words back into word groups
   string <- sapply(string, paste, collapse = " ")

@@ -4,12 +4,15 @@
 #' a literal whitespace, by a single whitespace. The function preserves German
 #' Umlaute and diacritical letters.
 #'
-#' Elaboration on the Regex classes: https://stackoverflow.com/a/2998550/13542638.
+#' Elaboration on the Regex classes:
+#' https://stackoverflow.com/a/2998550/13542638.
 #'
 #' @param string A character vector.
-#' @return \code{string} with special Unicode characters replaced by a whitespace.
+#' @return \code{string} with special Unicode characters replaced by a
+#'   whitespace.
 #' @examples
-#' .remove_special_chars("The following will be modified: hello-world.")
+#' thoremisc:::.remove_special_chars("The following will be modified: hello-world.")
+#' @importFrom stringr str_replace_all
 .remove_special_chars <- function(string) {
   string <- str_replace_all(string, "[^\\w\\d ]", " ")
   return(string)
@@ -23,7 +26,8 @@
 #' @param string A character vector.
 #' @return \code{string} with German Umlaute replaced.
 #' @examples
-#' .replace_umlaute("Äh, trörö in Überlingen, nicht auf dem Darß.")
+#' thoremisc:::.replace_umlaute("Äh, trörö in Überlingen, nicht auf dem Darß.")
+#' @importFrom stringr str_replace_all
 .replace_umlaute <- function(string) {
   df <- data.frame(
     umlaut = c("ä", "ö", "ü"),
@@ -50,7 +54,8 @@
 #' @return \code{string} with diacritical letters replaced by their ASCII
 #'   versions.
 #' @examples
-#' .remove_diacritics("Åll thëşé fūñny leŧters wîll be nørmalised.")
+#' thoremisc:::.remove_diacritics("Åll thëşé fūñny leŧters wîll be nørmalised.")
+#' @importFrom stringr str_detect str_remove_all
 .remove_diacritics <- function(string) {
   if(any(str_detect(string, "[äöü]"), na.rm = TRUE)) warning("Umlaute dropped.")
 
@@ -75,17 +80,10 @@
 #' @examples
 #' string_redund_ws(" This  string   will be shorter.   ")
 #' @export
+#' @importFrom stringr str_replace_all
 string_redund_ws <- function(string) {
-  # Replace multiple whitespaces by a single one, and trim leading and trailing
-  # whitespaces.
-  #
-  # Args:
-  #   s: character, vector of strings to clean
-  # Returns:
-  #   s, modified
-
   string <- str_replace_all(string, "\\s+", " ")
   string <- trimws(string)
 
-  return(s)
+  return(string)
 }
