@@ -31,6 +31,9 @@ Transform \code{string} into a simple lowercase ASCII representation. Options
 to convert \code{string} to lowercase, remove non-letter characters, replace
 German Umlaute, and transliterate diacritical letters (á, å, ê, ...).
 }
+\details{
+The function removes full stops, i.e. breaks sentences.
+}
 \examples{
-string_clean("Thîs sŧriñg will bé å løt simplêr. Köln is not in Schleswig-Holstein.")
+string_clean("Thîs sŧriñg will bé å løt simplêr. Köln is not in M-V.")
 }

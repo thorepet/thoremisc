@@ -4,6 +4,8 @@
 #' to convert \code{string} to lowercase, remove non-letter characters, replace
 #' German Umlaute, and transliterate diacritical letters (á, å, ê, ...).
 #'
+#' The function removes full stops, i.e. breaks sentences.
+#'
 #' @param string A character vector.
 #' @param lower Boolean, convert \code{string} to lowercase.
 #' @param spec_chars Boolean, remove non-letters.
@@ -11,7 +13,7 @@
 #' @param diacritics Boolean, transliterate diacritical letters.
 #' @return \code{string}, modified.
 #' @examples
-#' string_clean("Thîs sŧriñg will bé å løt simplêr. Köln is not in Schleswig-Holstein.")
+#' string_clean("Thîs sŧriñg will bé å løt simplêr. Köln is not in M-V.")
 #' @export
 string_clean <- function(
   string, lower = TRUE, spec_chars = TRUE, umlaute = TRUE, diacritics = TRUE
