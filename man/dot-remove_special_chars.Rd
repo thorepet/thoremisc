@@ -23,5 +23,5 @@ Elaboration on the Regex classes:
 https://stackoverflow.com/a/2998550/13542638.
 }
 \examples{
-thoremisc:::.remove_special_chars("The following will be modified: hello-world.")
+thoremisc:::.remove_special_chars("This will be modified: hello-world.")
 }

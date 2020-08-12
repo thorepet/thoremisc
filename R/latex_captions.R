@@ -3,7 +3,7 @@
 #'
 #' Credit to https://stackoverflow.com/a/42681368
 #'
-#' @param x An atomic character produced by \code{stargazer::stargazer()}.
+#' @param string An atomic character produced by \code{stargazer::stargazer()}.
 #' @param to_console Boolean, should the output be returned, or \code{cat()} to
 #' the console?
 #' @return \code{x} with the caption moved to the bottom.

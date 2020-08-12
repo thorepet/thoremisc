@@ -1,4 +1,4 @@
-#' Precede greek letters with backslashes for LaTeX.
+#' Precede greek letters with backslashes to render them in LaTeX.
 #'
 #' Precede greek letters or whatever supplied in \code{alphabet} with
 #' backslashes, such that when \code{cat()} is applied, the output can be
@@ -11,7 +11,7 @@
 #' @return \code{string} with all greek letters, and what is supplied in
 #' \code{alphabet} preceded by backslashes.
 #' @examples
-#' latex_greeks("alpha and beta and foo will be modified", "foo", TRUE)
+#' latex_greeks("alpha, beta, and foo will be modified; bar won't", "foo", TRUE)
 #' @export
 latex_greeks <- function(string, alphabet = NULL, append = FALSE) {
   if(is.null(alphabet) & append) stop("Supply an alphabet to be appended.")

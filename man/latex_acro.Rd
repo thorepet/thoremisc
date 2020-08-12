@@ -2,7 +2,7 @@
 % Please edit documentation in R/latex_acro.R
 \name{latex_acro}
 \alias{latex_acro}
-\title{Wrap abbreviations in text in a LaTeX command.}
+\title{Wrap abbreviations within a \code{string} in a LaTeX command.}
 \usage{
 latex_acro(string, acros, command = "acs*")
 }
@@ -19,9 +19,9 @@ latex_acro(string, acros, command = "acs*")
 \description{
 Wrap abbreviations in a given LaTeX command to toggle the \code{acronym} or
 \code{glossary} packages. \code{command} defaults to the \code{acronym}
-package's short command, that does not mark the abbreviation as used (the *).
-This avoids the acronym being rendered the first time in the list of figures
-or tables.
+package's short command, that does not mark abbreviations as used (by
+including "*"). This avoids the acronym being rendered the first time in the
+list of figures or tables.
 }
 \examples{
 latex_acro("This package is not on cran.", "cran")

@@ -14,8 +14,8 @@ A numeric vector containing \code{NA}s, and the count of the event
 corresponding to the dummy series.
 }
 \description{
-Given a numeric vector with dummies for events, ennumerate the events. Return
-a vector of \code{length(x)} filled with \code{NA}s, and the count, where
+Given a numeric vector with dummies for events, enumerate the events. Return
+a vector of \code{length(x)} filled with \code{NA}s, and a counter, where
 \code{x} equals \code{1}.
 }
 \examples{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/latex_greeks.R
 \name{latex_greeks}
 \alias{latex_greeks}
-\title{Precede greek letters with backslashes for LaTeX.}
+\title{Precede greek letters with backslashes to render them in LaTeX.}
 \usage{
 latex_greeks(string, alphabet = NULL, append = FALSE)
 }
@@ -24,5 +24,5 @@ backslashes, such that when \code{cat()} is applied, the output can be
 copied into a \code{.tex} document and be rendered.
 }
 \examples{
-latex_greeks("alpha and beta and foo will be modified", "foo", TRUE)
+latex_greeks("alpha, beta, and foo will be modified; bar won't", "foo", TRUE)
 }

@@ -1,7 +1,7 @@
 #' Count and ennumerate events in a dummy series.
 #'
-#' Given a numeric vector with dummies for events, ennumerate the events. Return
-#' a vector of \code{length(x)} filled with \code{NA}s, and the count, where
+#' Given a numeric vector with dummies for events, enumerate the events. Return
+#' a vector of \code{length(x)} filled with \code{NA}s, and a counter, where
 #' \code{x} equals \code{1}.
 #'
 #' @param x A numeric vector of \code{0}s and \code{1}s.

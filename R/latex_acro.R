@@ -1,10 +1,10 @@
-#' Wrap abbreviations in text in a LaTeX command.
+#' Wrap abbreviations within a \code{string} in a LaTeX command.
 #'
 #' Wrap abbreviations in a given LaTeX command to toggle the \code{acronym} or
 #' \code{glossary} packages. \code{command} defaults to the \code{acronym}
-#' package's short command, that does not mark the abbreviation as used (the *).
-#' This avoids the acronym being rendered the first time in the list of figures
-#' or tables.
+#' package's short command, that does not mark abbreviations as used (by
+#' including "*"). This avoids the acronym being rendered the first time in the
+#' list of figures or tables.
 #'
 #' @param string A character vector.
 #' @param acros A character vector of abbreviations to wrap.

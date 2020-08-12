@@ -5,7 +5,7 @@
 \title{Move the caption to the bottom of the table produced by
 \code{stargazer::stargazer()}.}
 \usage{
-latex_caption_to_bottom(x, to_console = FALSE)
+latex_caption_to_bottom(string, to_console = FALSE)
 }
 \arguments{
 \item{x}{An atomic character produced by \code{stargazer::stargazer()}.}

@@ -11,7 +11,7 @@
 #' @return \code{string} with special Unicode characters replaced by a
 #'   whitespace.
 #' @examples
-#' thoremisc:::.remove_special_chars("The following will be modified: hello-world.")
+#' thoremisc:::.remove_special_chars("This will be modified: hello-world.")
 #' @importFrom stringr str_replace_all
 .remove_special_chars <- function(string) {
   string <- str_replace_all(string, "[^\\w\\d ]", " ")

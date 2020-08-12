@@ -1,15 +1,15 @@
 #' Toggle LaTeX math mode for leading letters.
 #'
 #' Wrap the leading letters in \emph{t}-test, \emph{F}-statistic,
-#' \emph{p}-value etc. in $ to toggle math mode. Any combination to leading
-#' letter and trailing word will also be modified (i.e. if \emph{t}-test and
-#' \emph{F}-statistic are given, \emph{t}-statistic and \emph{F}-test will also
-#' be matched).
+#' \emph{p}-value, etc. in $ to toggle LaTeX math mode. Any combination to
+#' leading letter and trailing word will also be modified (i.e. if \emph{t}-test
+#' and \emph{F}-statistic are given, \emph{t}-statistic and \emph{F}-test will
+#' also be matched).
 #'
 #' @param string A character vector.
 #' @param convert A character vector of hyphenated words to wrap.
 #' @param append Boolean, should the words in \code{convert} be appended to the
-#' implemented words.
+#'   implemented words.
 #' @return \code{string} with leading letters wrapped in \code{$}.
 #' @examples
 #' latex_math_letters("The t-test and z-score.", "z-score")
