@@ -1,13 +1,25 @@
-#' Return the number of rows until a dummy equals \code{1}.
+#' Distance to dummy-coded events.
 #'
-#' Returns a vector of \code{length(x)} with the number of rows or steps until
-#' the next time the dummy series equals \code{1}.
+#' Given a dummy coded (\code{0} for non-event and \code{1} for event)
+#' timeseries, determine the number of periods (vector elements) until the next,
+#' and since the last event.
 #'
 #' @param x A numeric vector of \code{0}s and \code{1}s.
-#' @return A numeric vector.
+#' @name ts_event_dist
+#' @return \code{ts_next_in} and \code{ts_last_before} return a numeric vector
+#'   of \code{length(x)}.
+#'
+#'   \code{ts_event_dist} returns a \code{data.frame} with columns
+#'   \code{last_before} and \code{next_in}, and \code{length(x)} rows.
 #' @examples
 #' ts_next_in(c(0, 0, 0, 1, 0, 1, 0))
+#' ts_last_before(c(0, 0, 0, 1, 0, 1, 0))
+#' ts_event_dist(c(0, 0, 0, 1, 0, 1, 0))
+NULL
+#> NULL
+
 #' @export
+#' @rdname ts_event_dist
 #' @import data.table
 ts_next_in <-  function(x) {
   # https://cran.r-project.org/web/packages/data.table/vignettes/datatable-importing.html#globals
@@ -29,15 +41,7 @@ ts_next_in <-  function(x) {
   return(dt$next_in)
 }
 
-#' Return the number of rows since a dummy equaled \code{1}.
-#'
-#' Returns a vector of \code{length(x)} with the number of rows or steps since
-#' the last time the dummy series equaled \code{1}.
-#'
-#' @param x A numeric vector of \code{0}s and \code{1}s.
-#' @return A numeric vector.
-#' @examples
-#' ts_last_before(c(0, 0, 0, 1, 0, 1, 0))
+#' @rdname ts_event_dist
 #' @export
 #' @import data.table
 ts_last_before <-  function(x) {
@@ -60,17 +64,7 @@ ts_last_before <-  function(x) {
   return(dt$last_before)
 }
 
-#' Return a information on the occurence of a dummy
-#'
-#' Returns a \code{data.frame} of \code{length(x)} rows with a column of the
-#' number of rows or steps until the next time the dummy series equals \code{1},
-#' and a columns of the number of rows or steps since the last time the dummy
-#' series equaled \code{1}.
-#'
-#' @param x A numeric vector of \code{0}s and \code{1}s.
-#' @return A \code{data.frame} with two numeric columns.
-#' @examples
-#' ts_event_dist(c(0, 0, 0, 1, 0, 1, 0))
+#' @rdname ts_event_dist
 #' @export
 ts_event_dist <- function(x) {
   data.frame(last_before = ts_last_before(x), next_in = ts_next_in(x))

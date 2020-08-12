@@ -2,22 +2,33 @@
 % Please edit documentation in R/ts_event_dist.R
 \name{ts_event_dist}
 \alias{ts_event_dist}
-\title{Return a information on the occurence of a dummy}
+\alias{ts_next_in}
+\alias{ts_last_before}
+\title{Distance to dummy-coded events.}
 \usage{
+ts_next_in(x)
+
+ts_last_before(x)
+
 ts_event_dist(x)
 }
 \arguments{
 \item{x}{A numeric vector of \code{0}s and \code{1}s.}
 }
 \value{
-A \code{data.frame} with two numeric columns.
+\code{ts_next_in} and \code{ts_last_before} return a numeric vector
+  of \code{length(x)}.
+
+  \code{ts_event_dist} returns a \code{data.frame} with columns
+  \code{last_before} and \code{next_in}, and \code{length(x)} rows.
 }
 \description{
-Returns a \code{data.frame} of \code{length(x)} rows with a column of the
-number of rows or steps until the next time the dummy series equals \code{1},
-and a columns of the number of rows or steps since the last time the dummy
-series equaled \code{1}.
+Given a dummy coded (\code{0} for non-event and \code{1} for event)
+timeseries, determine the number of periods (timesteps) until the next, and
+since the last event.
 }
 \examples{
+ts_next_in(c(0, 0, 0, 1, 0, 1, 0))
+ts_last_before(c(0, 0, 0, 1, 0, 1, 0))
 ts_event_dist(c(0, 0, 0, 1, 0, 1, 0))
 }
