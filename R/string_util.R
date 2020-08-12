@@ -30,7 +30,7 @@
 #' @importFrom stringr str_replace_all
 .replace_umlaute <- function(string) {
   df <- data.frame(
-    umlaut = c("ä", "ö", "ü"),
+    umlaut = c("\\u00e4", "\\u00f6", "\\u00fc"),
     replace = c("ae", "oe", "ue")
   )
 
@@ -57,7 +57,10 @@
 #' thoremisc:::.remove_diacritics("Åll thëşé fūñny leŧters wîll be nørmalised.")
 #' @importFrom stringr str_detect str_remove_all
 .remove_diacritics <- function(string) {
-  if(any(str_detect(string, "[äöü]"), na.rm = TRUE)) warning("Umlaute dropped.")
+  # escaped aöü, see stringi::stri_escape_unicode()
+  if(any(str_detect(string, "[\\u00e4\\u00f6\\u00fc]"), na.rm = TRUE)) {
+    warning("Umlaute dropped.")
+  }
 
   # transliterate to ASCII: á->'a, è->`e, ë->"e, â->^a, æ->ae, ç->c, å->a, ...
   string <- iconv(string, to = "ASCII//TRANSLIT")
