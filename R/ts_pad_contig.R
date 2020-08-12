@@ -17,7 +17,7 @@
 #' x <- ts(x, start = c(2000, 1), frequency = 12)
 #' ts_pad_contig(x)
 #' @export
-#' @importFrom stats end is.ts na.contiguous ts
+#' @importFrom stats start end is.ts na.contiguous ts
 #' @importFrom utils head tail
 ts_pad_contig <- function(x) {
 
