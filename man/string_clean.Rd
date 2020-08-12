@@ -37,3 +37,7 @@ The function removes full stops, i.e. breaks sentences.
 \examples{
 string_clean("Thîs sŧriñg will bé å løt simplêr. Köln is not in M-V.")
 }
+\seealso{
+The function internally calls \code{\link{.remove_special_chars}},
+  \code{\link{.replace_umlaute}}, and \code{\link{.remove_diacritics}}.
+}

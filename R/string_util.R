@@ -35,6 +35,7 @@
 #' thoremisc:::.replace_umlaute("Äh, trörö in Überlingen, nicht auf dem Darß.")
 #' thoremisc:::.remove_diacritics("Åll thëşé fūñny leŧters wîll be nørmalised.")
 #' @seealso \code{\link{string_clean}} and \code{\link{string_redund_ws}}
+#' @keywords internal
 NULL
 #> NULL
 

@@ -24,8 +24,8 @@ ts_event_dist(x)
 }
 \description{
 Given a dummy coded (\code{0} for non-event and \code{1} for event)
-timeseries, determine the number of periods (timesteps) until the next, and
-since the last event.
+timeseries, determine the number of periods (vector elements) until the next,
+and since the last event.
 }
 \examples{
 ts_next_in(c(0, 0, 0, 1, 0, 1, 0))

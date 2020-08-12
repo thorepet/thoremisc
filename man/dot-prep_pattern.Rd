@@ -20,3 +20,4 @@ vector elements will be surrounded by word boundaries, and combined with
 logical ORs. The whole thing is wrapped in parantheses to catch it as a
 group.
 }
+\keyword{internal}

@@ -14,6 +14,8 @@
 #' @return \code{string}, modified.
 #' @examples
 #' string_clean("Thîs sŧriñg will bé å løt simplêr. Köln is not in M-V.")
+#' @seealso The function internally calls \code{\link{.remove_special_chars}},
+#'   \code{\link{.replace_umlaute}}, and \code{\link{.remove_diacritics}}.
 #' @export
 string_clean <- function(
   string, lower = TRUE, spec_chars = TRUE, umlaute = TRUE, diacritics = TRUE

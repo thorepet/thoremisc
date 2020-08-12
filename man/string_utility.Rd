@@ -56,3 +56,4 @@ thoremisc:::.remove_diacritics("Åll thëşé fūñny leŧters wîll be nørmali
 \seealso{
 \code{\link{string_clean}} and \code{\link{string_redund_ws}}
 }
+\keyword{internal}
