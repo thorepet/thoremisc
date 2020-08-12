@@ -1,10 +1,10 @@
 Package: thoremisc
 Type: Package
 Title: Miscellaneous Functions
-Version: 0.1.0
+Version: 0.1.1
 Author: Thore Petersen
 Maintainer: Thore Pet <pet.thore@gmail.com>
-Description: Miscellaneous functions that have accumulated over time for various purposes.
+Description: Miscellaneous functions for various purposes that have accumulated over time.
 Depends: R (>= 3.5.0)
 License: GPL-3
 Encoding: UTF-8
