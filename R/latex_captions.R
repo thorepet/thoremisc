@@ -5,19 +5,20 @@
 #'
 #' @param string An atomic character produced by \code{stargazer::stargazer()}.
 #' @param to_console Boolean, should the output be returned, or \code{cat()} to
-#' the console?
+#' the console (and invisibly returned)?
 #' @return \code{x} with the caption moved to the bottom.
 #' @examples
-#' latex_caption_to_bottom(stargazer::stargazer(
-#' data.frame(a = rnorm(5), b = rnorm(5))), FALSE)
+#' df <- data.frame(a = rnorm(5), b = rnorm(5))
+#' sg <- stargazer::stargazer(df)
+#' latex_caption_to_bottom(sg, FALSE)
 #' @export
-latex_caption_to_bottom <- function(x, to_console = FALSE) {
-  cap <- grep("\\\\caption", x)
-  lab <- grep("\\\\label", x)
-  last <- grep("\\\\end\\{table", x)
+latex_caption_to_bottom <- function(string, to_console = FALSE) {
+  cap <- grep("\\\\caption", string)
+  lab <- grep("\\\\label", string)
+  last <- grep("\\\\end\\{table", string)
 
   res <- paste(
-    c(x[-last], x[cap], x[lab], x[last])[-c(cap, lab)],
+    c(string[-last], string[cap], string[lab], string[last])[-c(cap, lab)],
     collapse = "\n"
   )
 
@@ -36,9 +37,9 @@ latex_caption_to_bottom <- function(x, to_console = FALSE) {
 #' @param to_bottom Boolean, should the caption moved to the bottom?
 #' @return \code{string} with an added \code{caption}
 #' @examples
-#' latex_add_caption(stargazer::stargazer(
-#' data.frame(a = rnorm(5), b = rnorm(5))), "This is going to be the caption",
-#' TRUE)
+#' df <- data.frame(a = rnorm(5), b = rnorm(5))
+#' sg <- stargazer::stargazer(df)
+#' latex_add_caption(sg, "This is going to be the caption", TRUE)
 #' @export
 latex_add_caption <- function(string, caption, to_bottom = TRUE) {
   if(to_bottom) string <- latex_caption_to_bottom(string, to_console = FALSE)

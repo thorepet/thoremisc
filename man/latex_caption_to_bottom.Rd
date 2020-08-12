@@ -8,10 +8,10 @@
 latex_caption_to_bottom(string, to_console = FALSE)
 }
 \arguments{
-\item{x}{An atomic character produced by \code{stargazer::stargazer()}.}
+\item{string}{An atomic character produced by \code{stargazer::stargazer()}.}
 
 \item{to_console}{Boolean, should the output be returned, or \code{cat()} to
-the console?}
+the console (and invisibly returned)?}
 }
 \value{
 \code{x} with the caption moved to the bottom.
@@ -20,6 +20,7 @@ the console?}
 Credit to https://stackoverflow.com/a/42681368
 }
 \examples{
-latex_caption_to_bottom(stargazer::stargazer(
-data.frame(a = rnorm(5), b = rnorm(5))), FALSE)
+df <- data.frame(a = rnorm(5), b = rnorm(5))
+sg <- stargazer::stargazer(df)
+latex_caption_to_bottom(sg, FALSE)
 }
