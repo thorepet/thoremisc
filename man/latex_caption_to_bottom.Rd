@@ -14,7 +14,7 @@ latex_caption_to_bottom(string, to_console = FALSE)
 the console (and invisibly returned)?}
 }
 \value{
-\code{x} with the caption moved to the bottom.
+\code{string} with the caption moved to the bottom.
 }
 \description{
 Credit to https://stackoverflow.com/a/42681368
@@ -22,5 +22,5 @@ Credit to https://stackoverflow.com/a/42681368
 \examples{
 df <- data.frame(a = rnorm(5), b = rnorm(5))
 sg <- stargazer::stargazer(df)
-latex_caption_to_bottom(sg, FALSE)
+latex_caption_to_bottom(sg)
 }

@@ -6,11 +6,11 @@
 #' @param string An atomic character produced by \code{stargazer::stargazer()}.
 #' @param to_console Boolean, should the output be returned, or \code{cat()} to
 #' the console (and invisibly returned)?
-#' @return \code{x} with the caption moved to the bottom.
+#' @return \code{string} with the caption moved to the bottom.
 #' @examples
 #' df <- data.frame(a = rnorm(5), b = rnorm(5))
 #' sg <- stargazer::stargazer(df)
-#' latex_caption_to_bottom(sg, FALSE)
+#' latex_caption_to_bottom(sg)
 #' @export
 latex_caption_to_bottom <- function(string, to_console = FALSE) {
   cap <- grep("\\\\caption", string)
@@ -39,7 +39,7 @@ latex_caption_to_bottom <- function(string, to_console = FALSE) {
 #' @examples
 #' df <- data.frame(a = rnorm(5), b = rnorm(5))
 #' sg <- stargazer::stargazer(df)
-#' latex_add_caption(sg, "This is going to be the caption", TRUE)
+#' latex_add_caption(sg, "This is going to be the caption")
 #' @export
 latex_add_caption <- function(string, caption, to_bottom = TRUE) {
   if(to_bottom) string <- latex_caption_to_bottom(string, to_console = FALSE)

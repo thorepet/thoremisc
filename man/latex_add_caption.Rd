@@ -22,5 +22,5 @@ Add a caption to a \code{stargazer::stargazer()} output.
 \examples{
 df <- data.frame(a = rnorm(5), b = rnorm(5))
 sg <- stargazer::stargazer(df)
-latex_add_caption(sg, "This is going to be the caption", TRUE)
+latex_add_caption(sg, "This is going to be the caption")
 }
