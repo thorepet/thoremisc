@@ -44,7 +44,7 @@ and "ü"->"ue". "ß" is diacritical and handled by \code{.remove_diacritics}.
 Replace diacritical letters(é, ç, ...) with their "plain" versions. This
 function can only handle diacritical letters from latin-based alphabets.
 Elements in \code{string} containinig non-latin letters (e.g. cyrillic), will
-be replaced by \code{NA}.
+be replaced by \code{NA} and a warning will be given.
 
 Reference: https://stackoverflow.com/a/20495866/13542638
 }

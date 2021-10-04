@@ -16,7 +16,7 @@
 #' Replace diacritical letters(é, ç, ...) with their "plain" versions. This
 #' function can only handle diacritical letters from latin-based alphabets.
 #' Elements in \code{string} containinig non-latin letters (e.g. cyrillic), will
-#' be replaced by \code{NA}.
+#' be replaced by \code{NA} and a warning will be given.
 #'
 #' Reference: https://stackoverflow.com/a/20495866/13542638
 #'
@@ -70,12 +70,19 @@ NULL
   }
 
   # transliterate to ASCII: á->'a, è->`e, ë->"e, â->^a, æ->ae, ç->c, å->a, ...
-  string <- iconv(string, to = "ASCII//TRANSLIT")
+  tstring <- iconv(string, to = "ASCII//TRANSLIT")
 
   # remove "'", "`", "^", """, "~"
-  string <- str_remove_all(string, "['`\\^\"~]")
+  tstring <- str_remove_all(tstring, "['`\\^\"~]")
 
-  if(any(is.na(string))) warning("Some strings could not be transliterated.")
+  if(any(is.na(tstring))) {
+    translit_err <- paste(string[is.na(tstring)], collapse = "\n")
+    wmessage <- paste(
+      "The following strings could not be transliterated:", translit_err,
+      sep = "\n"
+    )
+    warning(wmessage)
+  }
 
-  return(string)
+  return(tstring)
 }
